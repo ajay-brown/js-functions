@@ -106,7 +106,7 @@ function square(x) {
  * @return {number} the result
  */
 
-	var x = 4;
+	var x = 5;
 	var y = 7;
 	var operation;
  function calculate(operation,x,y) {
