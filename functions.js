@@ -106,27 +106,28 @@ function square(x) {
  * @return {number} the result
  */
 
-	var x = 5;
-	var y = 7;
+	var x;
+	var y;
 	var operation;
  function calculate(operation,x,y) {
+
  	if (operation === "add") {
 	var sum = x + y;
-	console.log(x + "+" + y + "=" + sum);
+	console.log(x + " + " + y + " = " + sum);
 	return sum;
 	}
 	else if (operation === "subtract") {
 		var sum = x - y;
-	console.log(x + "-" + y + "=" + sum);
+	console.log(x + " - " + y + " = " + sum);
 	return sum;
 	}
 	else if (operation === "multiply") {
 		var sum = x * y;
-	console.log(x + "*" + y + "=" + sum);
+	console.log(x + " * " + y + " = " + sum);
 	return sum;
 	} else if (operation === "divide") {
 		var sum = x / y;
-	console.log(x + "/" + y + "=" + sum);
+	console.log(x + " / " + y + " = " + sum);
 	return sum;
 	}
 }
@@ -243,19 +244,21 @@ function isOdd(n) {
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
-var score = 50;
-var total = 100;
-function letterGrade(score,total) {
- if (score < 59) {
- 	return "F";
-} else if (score < 69 && score > 60) {
-	return "D";
-} else if (score < 79 && score > 70) {
-	return "C";
-} else if (score < 89 && score > 80) {
+var score = 6;
+var total = 9;
+function letterGrade(score, total) {
+	var percent = ((score / total) * 100);
+ 
+ if (percent >= 90) {
+ 	return "A";
+} else if (percent < 90 && percent >= 80) {
 	return "B";
-} else  {
-	return "A";
+} else if (percent < 80 && percent >= 70) {
+	return "C";
+} else if (percent < 70 && percent >= 60) {
+	return "D";
+} else {
+	return "F";
 	}
 }
 
